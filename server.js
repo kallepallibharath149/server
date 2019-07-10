@@ -6,25 +6,9 @@
 // }).listen(8080);
 
 var http=require('http');
-var url = require('url');
-var mysql= require('mysql');
+
 // var nodemailer = require('nodemailer');
-var fs = require('fs');
-var adr = 'http://localhost:8080/default.htm?year=2017&month=february';
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database:"mydb"
-  });
-  con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-    con.query("SELECT * FROM customers", function (err, result, fields) {
-        if (err) throw err;
-        console.log(result[0]);
-      });
-  });
+
 // var transport=nodemailer.createTransport({
 //     service:'gmail',
 //     auth:{
