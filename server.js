@@ -46,11 +46,8 @@ http.createServer(function(req, res){
 //     res.write(data);
 //     res.end();
 //    })
+res.end('Hello World');
 
-   var q=url.parse(adr,true);
-   res.write(q.host);
-   res.write(q.pathname);
-   res.write(q.search);
-    var qdata=q.query;
+   
     console.log(qdata,q.host,q.pathname,q.search);
 }).listen(8080);
